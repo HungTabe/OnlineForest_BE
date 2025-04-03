@@ -1,0 +1,63 @@
+# .NET Core
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# ASP.NET Core
+wwwroot/
+*.db
+*.bak
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer logs
+*.log
+
+# Azure Web App
+.vscode/
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+.idea/
+
+# JetBrains Rider
+.idea/
+
+# ASP.NET Core publish folder
+publish/
+
+# Logs
+logs/
+*.log
+
+# NPM
+node_modules/
+
+# NuGet
+.nuget/
+packages/
+
+# Project-specific files
+*.vsconfig
+
+# VS for Mac
+.vscode/
+
+# ASP.NET Core development certificates
+https://docs.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-6.0#development-certificates
