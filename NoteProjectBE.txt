@@ -1,0 +1,42 @@
+DỰ ÁN : THE FOREST ONLINE
+MỤC ĐÍCH : 
+- COUNT LOC STUDY TIME CHO MỌI NGƯỜI
+- ONLINE HÓA ĐỂ TẠO THÀNH CỘNG ĐỒNG HỌC (VỪA ĐỦ)
+- COUNT TIME ĐỂ TRỒNG CÂY
+
+CÁC CHỨC NĂNG CƠ BẢN : 
+- ĐĂNG NHẬP
+- ĐĂNG KÍ
+- VÔ MÀN CHÍNH ĐỂ COUNT RỒI TRỒNG CÂY (BASE)
+
+DEPLOY TRÊN AZURE VÀ RENDER
+BACKEND : C#
+FRONTEND : REACTJS
+
+ĐÃ KHỞI TẠO GIT
+- SẮP TỚI DỰNG BASE CHO BE VÀ FE
+
+SỬ DỤNG DB LÀ SUBABASE
+
+Link : NOTION
+https://www.notion.so/ONLINE-FOREST-1caed5cf2ba080d790eef1473a04092a?pvs=4
+
+Class User để chứa thông tin người dùng
+Class Tree
+Class Land để chứa thông tin land đựng tree
+Class StudyTime
+Class 
+
+Luồng làm việc người dùng
+Người dùng vào đăng kí rồi đăng nhập để dùng - Class user
+Người dùng nhận land để trồng cây - Class land
+Người dùng chọn cây để trồng - Class tree
+Người dùng chọn time để trồng cây - Class 
+Người dùng hoàn thành thời gian trồng nhận được token - Class Token earn
+Người dùng sẽ có cây Tree trên đất Land và token khi hoàn thành cái họ đề ra
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+@OnlineForestAPI_HostAddress = http://localhost:5205
+
+GET {{OnlineForestAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
