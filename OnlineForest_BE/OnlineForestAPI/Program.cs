@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using OnlineForestAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Read Connection String from appsettings.json and register DbContext
+builder.Services.AddDbContext<ForestOnlineDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
