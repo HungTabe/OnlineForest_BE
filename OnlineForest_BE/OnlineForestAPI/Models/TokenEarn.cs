@@ -13,11 +13,15 @@ namespace OnlineForestAPI.Models
         [Range(0, int.MaxValue)] // Đảm bảo số token không âm
         public int Tokens { get; set; }
 
-        [Required] // Yêu cầu trường này không thể để trống
+        [Required]
         public DateTime EarnedAt { get; set; }
 
-        [Required] // Yêu cầu trường này không thể để trống
+        [Required]
         public string Reason { get; set; }
+
+        // Khóa ngoại đến Tree
+        public int TreeId { get; set; }
+        public Tree Tree { get; set; }
 
     }
 }

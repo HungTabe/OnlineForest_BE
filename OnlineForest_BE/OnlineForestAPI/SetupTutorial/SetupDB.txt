@@ -1,0 +1,9 @@
+Setup DB at SMSS
+CREATE DATABASE ForestOnlineDb;
+
+Create migration for code first method
+- dotnet build
+- dotnet ef migrations add InitialCreate
+- dotnet ef migrations remove (if delete migration)
+- dotnet ef database update
+
