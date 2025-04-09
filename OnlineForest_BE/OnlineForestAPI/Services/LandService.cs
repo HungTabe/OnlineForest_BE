@@ -13,9 +13,39 @@ namespace OnlineForestAPI.Services
             _context = context;
         }
 
-        public Task<Land> RegisterLandAsync(int userId, int LandCategoryId, string LandSpecificName)
+        public async Task<Land> RegisterLandAsync(int userId, int LandCategoryId, string LandSpecificName)
         {
-            throw new NotImplementedException();
+            // 1. Check if the user exists in the database
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                throw new ArgumentException("User not found.");
+            }
+
+            // 2. Check if the type of land (landcategory) does not exist
+            var landCategory = await _context.LandCategories.FindAsync(LandCategoryId);
+            if (landCategory == null)
+            {
+                throw new ArgumentException("Land Category not found.");
+            }
+
+
+            // 3. Create new Land object
+            var land = new Land
+            {
+                UserId = userId,
+                LandSpecificName = LandSpecificName,
+                LandCategoryId = LandCategoryId,
+                LandCategory = landCategory,
+                LastPlanted = DateTime.Now
+            };
+
+            // 4. Add Land object to the database
+            _context.Lands.Add(land);
+            await _context.SaveChangesAsync();
+
+            // 5. Returned the land has been registered
+            return land;
         }
     }
 }
