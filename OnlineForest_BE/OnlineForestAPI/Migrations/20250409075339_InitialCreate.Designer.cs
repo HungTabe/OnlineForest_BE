@@ -12,7 +12,7 @@ using OnlineForestAPI.Data;
 namespace OnlineForestAPI.Migrations
 {
     [DbContext(typeof(ForestOnlineDbContext))]
-    [Migration("20250408151213_InitialCreate")]
+    [Migration("20250409075339_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -35,6 +35,11 @@ namespace OnlineForestAPI.Migrations
 
                     b.Property<int>("LandCategoryId")
                         .HasColumnType("int");
+
+                    b.Property<string>("LandSpecificName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime>("LastPlanted")
                         .HasColumnType("datetime2");

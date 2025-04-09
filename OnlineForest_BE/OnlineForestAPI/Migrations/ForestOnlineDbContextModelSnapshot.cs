@@ -33,6 +33,11 @@ namespace OnlineForestAPI.Migrations
                     b.Property<int>("LandCategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("LandSpecificName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<DateTime>("LastPlanted")
                         .HasColumnType("datetime2");
 
