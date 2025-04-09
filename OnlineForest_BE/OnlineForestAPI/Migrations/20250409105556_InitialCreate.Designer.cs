@@ -12,7 +12,7 @@ using OnlineForestAPI.Data;
 namespace OnlineForestAPI.Migrations
 {
     [DbContext(typeof(ForestOnlineDbContext))]
-    [Migration("20250409075339_InitialCreate")]
+    [Migration("20250409105556_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -192,6 +192,10 @@ namespace OnlineForestAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Password")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Role")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
