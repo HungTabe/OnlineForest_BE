@@ -192,6 +192,10 @@ namespace OnlineForestAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("Role")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<int?>("TotalTokenEarn")
                         .HasColumnType("int");
 

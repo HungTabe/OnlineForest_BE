@@ -50,6 +50,7 @@ namespace OnlineForestAPI.Migrations
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Role = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LastLogin = table.Column<DateTime>(type: "datetime2", nullable: true),
                     TotalTokenEarn = table.Column<int>(type: "int", nullable: true)
