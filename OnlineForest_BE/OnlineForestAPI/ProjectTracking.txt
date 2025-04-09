@@ -7,6 +7,9 @@ TASK 1 :
 Triển khai chức năng : 
 1 - Mở land & Đăng kí land
 2 - Đăng kí tree & Xác nhận tree & nhận token
+3 - Khởi tạo landCategory
+4 - Điều chỉnh lại cái database scheme - generate lại
+
 
 
 
