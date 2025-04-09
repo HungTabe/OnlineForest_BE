@@ -90,6 +90,10 @@ namespace OnlineForestAPI.Data
                 .Property(l => l.LastPlanted)
                 .IsRequired();
 
+            modelBuilder.Entity<Land>()
+                .Property(t => t.LandSpecificName)
+                .HasMaxLength(100);
+
             modelBuilder.Entity<LandCategory>()
                 .Property(lc => lc.Name)
                 .IsRequired()
