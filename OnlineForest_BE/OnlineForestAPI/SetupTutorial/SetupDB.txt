@@ -1,4 +1,4 @@
-Setup DB at SMSS
+﻿Setup DB at SMSS
 CREATE DATABASE ForestOnlineDb;
 
 Create migration for code first method
@@ -6,4 +6,9 @@ Create migration for code first method
 - dotnet ef migrations add InitialCreate
 - dotnet ef migrations remove (if delete migration)
 - dotnet ef database update
+
+Update User Role from USER to ADMIN
+UPDATE [ForestOnlineDb].[dbo].[Users]
+SET [Role] = 'ADMIN'
+WHERE [UserId] = 1;  -- Thay 1 bằng UserId thực tế của người dùng cần thay đổi
 

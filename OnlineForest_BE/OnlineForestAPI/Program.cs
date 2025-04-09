@@ -11,6 +11,10 @@ builder.Services.AddDbContext<ForestOnlineDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ILandService, LandService>();
+builder.Services.AddScoped<ILandCategoryService, LandCategoryService>();
+
+
 
 
 builder.Services.AddControllers();

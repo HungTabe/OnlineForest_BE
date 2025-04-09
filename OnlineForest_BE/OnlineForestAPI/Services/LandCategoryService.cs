@@ -1,4 +1,6 @@
-﻿using OnlineForestAPI.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using OnlineForestAPI.Data;
+using OnlineForestAPI.DTO;
 using OnlineForestAPI.Interfaces;
 using OnlineForestAPI.Models;
 
@@ -34,6 +36,21 @@ namespace OnlineForestAPI.Services
             await _context.SaveChangesAsync();
 
             return landCategory;
+        }
+
+        public async Task<IEnumerable<LandCategoryDTO>> GetAllLandCategoriesAsync()
+        {
+            var landCategories = await _context.LandCategories
+                .Select(lc => new LandCategoryDTO
+                {
+                    LandCategoryId = lc.LandCategoryId,
+                    Name = lc.Name,
+                    MaxSlots = lc.MaxSlots,
+                    LandPrice = lc.LandPrice
+                })
+                .ToListAsync();
+
+            return landCategories;
         }
     }
 }
