@@ -10,11 +10,14 @@ namespace OnlineForestAPI.Models
         [StringLength(50)] // Giới hạn độ dài tối đa của trường
         public string? Username { get; set; }
 
-        [StringLength(100)] // Giới hạn độ dài tối đa của trường
+        [StringLength(100)]
         public string? Password { get; set; }
 
-        [StringLength(100)] // Giới hạn độ dài tối đa của trường
+        [StringLength(100)]
         public string? Email { get; set; }
+
+        [StringLength(100)]
+        public string? Role { get; set; }
 
         public DateTime? CreatedAt { get; set; }
 

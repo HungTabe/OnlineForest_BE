@@ -28,6 +28,7 @@ namespace OnlineForestAPI.Services
                 Username = username,
                 Password = password,
                 Email = email,
+                Role = "USER",
                 CreatedAt = DateTime.Now,
                 LastLogin = DateTime.Now,
                 TotalTokenEarn = 0

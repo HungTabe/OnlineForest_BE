@@ -77,6 +77,10 @@ namespace OnlineForestAPI.Data
                 .Property(u => u.Email)
                 .HasMaxLength(100);
 
+            modelBuilder.Entity<User>()
+                .Property(u => u.Role)
+                .HasMaxLength(100);
+
             modelBuilder.Entity<Tree>()
                 .Property(t => t.Name)
                 .HasMaxLength(100);

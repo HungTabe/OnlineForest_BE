@@ -9,6 +9,8 @@ namespace OnlineForestAPI.Models
 
         [Required] // Yêu cầu trường này không thể để trống
         public int UserId { get; set; }
+
+        [StringLength(100)]
         public string LandSpecificName { get; set; }
 
         // Liên kết với bảng LandCategory (Mỗi Land thuộc một LandCategory)
