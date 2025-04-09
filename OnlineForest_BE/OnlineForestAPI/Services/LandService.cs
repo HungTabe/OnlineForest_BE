@@ -1,4 +1,5 @@
 ﻿using OnlineForestAPI.Data;
+using OnlineForestAPI.DTO;
 using OnlineForestAPI.Interfaces;
 using OnlineForestAPI.Models;
 
@@ -13,7 +14,7 @@ namespace OnlineForestAPI.Services
             _context = context;
         }
 
-        public async Task<Land> RegisterLandAsync(int userId, int LandCategoryId, string LandSpecificName)
+        public async Task<LandDTO> RegisterLandAsync(int userId, int LandCategoryId, string LandSpecificName)
         {
             // 1. Check if the user exists in the database
             var user = await _context.Users.FindAsync(userId);
@@ -44,8 +45,17 @@ namespace OnlineForestAPI.Services
             _context.Lands.Add(land);
             await _context.SaveChangesAsync();
 
-            // 5. Returned the land has been registered
-            return land;
+            // 5. Return a LandDto (Data Transfer Object)
+            var landDTO = new LandDTO
+            {
+                LandId = land.LandId,
+                UserId = land.UserId,
+                LandSpecificName = land.LandSpecificName,
+                LandCategoryId = land.LandCategoryId,
+                LastPlanted = land.LastPlanted
+            };
+
+            return landDTO; // Return the DTO instead of the full Land object
         }
     }
 }
