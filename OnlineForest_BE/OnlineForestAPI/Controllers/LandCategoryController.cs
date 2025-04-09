@@ -22,7 +22,7 @@ namespace OnlineForestAPI.Controllers
         public async Task<IActionResult> RegisterLandCategory([FromBody] RegisterLandCategoryRequestDTO request)
         {
             // Validate input model
-            if (request == null || string.IsNullOrEmpty(request.LandCategoryName) || request.MaxSlots <= 0 || request.LandPrice <= 0)
+            if (request == null || string.IsNullOrEmpty(request.LandCategoryName) || request.MaxSlots <= 0 || request.LandPrice < 0)
             {
                 return BadRequest("Invalid input data.");
             }
@@ -45,5 +45,19 @@ namespace OnlineForestAPI.Controllers
             }
         }
 
+        [HttpGet("get-all-land-category")]
+        public async Task<IActionResult> GetAllLandCategories()
+        {
+            try
+            {
+                var landCategories = await _landCategoryService.GetAllLandCategoriesAsync();
+
+                return Ok(landCategories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
