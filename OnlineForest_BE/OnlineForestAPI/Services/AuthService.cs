@@ -40,14 +40,14 @@ namespace OnlineForestAPI.Services
             return user;
         }
 
-        public async Task<User> LoginAsync(string username, string password)
+        public async Task<User> LoginAsync(string email, string password)
         {
             var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
+                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
 
             if (user == null)
             {
-                throw new InvalidOperationException("Username or password incorrectly.");
+                throw new InvalidOperationException("Email or password incorrectly.");
             }
 
             user.LastLogin = DateTime.Now;
