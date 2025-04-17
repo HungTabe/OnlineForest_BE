@@ -11,6 +11,8 @@ Triển khai chức năng :
 4 - Điều chỉnh lại cái database scheme - generate lại [DONE]
 5 - Get all lanCategory by admin haven't check role yet [DONE]
 6 - Code Authen by token for WebApp [DONE]
+7 - DO API Create Tree Type & Land Type [50%] FROM ADMIN ROLE
+8 - Bên cạnh Tree Price thì phải có Token Earn In Tree in Tree Category Model
 
 
 
