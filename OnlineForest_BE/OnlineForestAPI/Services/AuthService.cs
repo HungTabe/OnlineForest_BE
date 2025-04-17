@@ -79,7 +79,7 @@ namespace OnlineForestAPI.Services
             var claims = new[]
             {
             new Claim(ClaimTypes.Name, username),
-            new Claim(ClaimTypes.Role, username),
+            new Claim(ClaimTypes.Role, role),
             new Claim(ClaimTypes.Email, email),
 
         };

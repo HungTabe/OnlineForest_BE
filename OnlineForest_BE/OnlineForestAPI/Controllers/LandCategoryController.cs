@@ -18,7 +18,7 @@ namespace OnlineForestAPI.Controllers
             _landCategoryService = landCategoryService;
         }
 
-        [HttpPost("register-land-category")]
+        [HttpPost("register-land-category-by-admin")]
         public async Task<IActionResult> RegisterLandCategory([FromBody] RegisterLandCategoryRequestDTO request)
         {
             // Validate input model
