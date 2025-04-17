@@ -10,6 +10,7 @@ Triển khai chức năng :
 3 - Khởi tạo landCategory for Admin role [DONE] - Refactor User [DONE] role data scheme nhé [DONE]
 4 - Điều chỉnh lại cái database scheme - generate lại [DONE]
 5 - Get all lanCategory by admin haven't check role yet [DONE]
+6 - Code Authen by token for WebApp [DONE]
 
 
 

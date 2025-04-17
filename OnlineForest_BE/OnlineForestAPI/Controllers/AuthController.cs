@@ -44,8 +44,8 @@ namespace OnlineForestAPI.Controllers
 
             try
             {
-                var user = await _authService.LoginAsync(request.Email, request.Password);
-                return Ok(new { Message = "Sign in successfully!", UserId = user.UserId });
+                var userLoginResponseDTO = await _authService.LoginAsync(request.Email, request.Password);
+                return Ok(new { Message = "Sign in successfully!", userLoginResponseDTO });
             }
             catch (InvalidOperationException ex)
             {
