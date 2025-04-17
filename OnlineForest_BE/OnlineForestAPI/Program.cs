@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ForestOnlineDbContext>(options =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ILandService, LandService>();
 builder.Services.AddScoped<ILandCategoryService, LandCategoryService>();
+builder.Services.AddScoped<ITreeCategoryService, TreeCategoryService>();
+
 
 
 
